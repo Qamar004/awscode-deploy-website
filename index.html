@@ -4,39 +4,63 @@
     <meta charset="UTF-8">
     <title>Qamar Jahangir</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f9f9f9;
+        body, html {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
         }
+
+        .hero {
+            background-image: url('images/professional-bg.jpg'); /* replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background-color: rgba(0,0,0,0.5); /* dark overlay for text readability */
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            z-index: 1;
+        }
+
         h1 {
-            font-size: 2.5em;
-            color: #222;
+            font-size: 3em;
             margin-bottom: 0.5em;
         }
+
         p {
-            font-size: 1.2em;
-            color: #555;
+            font-size: 1.5em;
+            margin-bottom: 1em;
         }
+
         footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 0.9em;
-            color: #888;
+            font-size: 1em;
+            margin-top: 1em;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
-    <h1>Innovating in Cloud & DevOps Solutions</h1>
-    <p>Building reliable, scalable, and efficient applications for real-world impact.</p>
-    <footer>- Qamar Jahangir</footer>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovating in Cloud & DevOps Solutions</h1>
+            <p>Building reliable, scalable, and efficient applications for real-world impact.</p>
+            <footer>- Qamar Jahangir</footer>
+        </div>
+    </section>
 </body>
 </html>
